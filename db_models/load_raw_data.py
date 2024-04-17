@@ -16,7 +16,7 @@ def load_spotify_data(filepath):
     )
     cursor = conn.cursor()
 
-    # Preparar la sentencia SQL para insertar datos
+    # SQL Sentence
     insert_query = """
     INSERT INTO spotify_data (
         unnamed_0, track_id, artists, album_name, track_name, popularity,
@@ -26,7 +26,7 @@ def load_spotify_data(filepath):
     ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
     """
 
-    # Usar executemany para insertar múltiples filas
+
     try:
         cursor.executemany(insert_query, dataframe.values.tolist())
         conn.commit()
@@ -66,7 +66,7 @@ def load_grammys_data(csv_path):
     for row in dataframe.itertuples(index=False, name=None):
         cursor.execute(insert_query, row)
 
-    # Commit los cambios
+
     conn.commit()
     cursor.close()
     conn.close()

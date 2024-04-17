@@ -2,11 +2,11 @@ import psycopg2
 import json
 
 def create_database_and_table():
-    # Carga las credenciales de un archivo JSON
+    
     with open('config\credentials.json', 'r') as file:
         credentials = json.load(file)
     
-    # Conexión a la base de datos PostgreSQL
+    # Connection to PostgreSQL
     conn = psycopg2.connect(
         dbname='postgres', 
         user=credentials['user'],
@@ -29,7 +29,7 @@ def create_database_and_table():
     )
     cursor = conn.cursor()
 
-    # Crear tabla spotify_data
+    # Create Table spotify_data
     cursor.execute("""
         CREATE TABLE spotify_data (
             unnamed_0 INT,
@@ -55,7 +55,7 @@ def create_database_and_table():
             track_genre VARCHAR(1000)
         );
     """)
-        # Crear tabla grammys_data
+        # Create Table grammys_data
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS grammys_data (
             year INT,
@@ -71,7 +71,7 @@ def create_database_and_table():
         );
     """)
     
-    # Confirmar y cerrar
+
     conn.commit()
     cursor.close()
     conn.close()
