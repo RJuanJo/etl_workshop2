@@ -5,3 +5,4 @@ __pycache__/
 spotify_to_merge.csv
 grammys_to_merge.csv
 merged_data.csv
+secret.json

@@ -6,7 +6,7 @@ import os
 sys.path.append(os.path.abspath("/opt/airflow/dags/"))
 from etls.grammy_etl import extract_grammy_data, transform_grammy_data
 from etls.spotify_etl import extract_spotify_data, transform_spotify_data
-from etls.merge_load_data import merge_data, save_to_postgres
+from etls.merge_load_data import merge_data, save_to_postgres, upload_to_drive
 
 default_args = {
     'owner': 'airflow',
@@ -60,5 +60,12 @@ with DAG(
         python_callable=save_to_postgres
     ) 
 
+    upload_to_drive_task = PythonOperator(
+    task_id='upload_to_drive',
+    python_callable=upload_to_drive,
+    provide_context=True,
+    dag=dag,
+    )
     grammy_extract_task >> grammy_transform_task >> merge_task >> load_db
     spotify_extract_task >> spotify_transform_task >> merge_task >> load_db
+    merge_task >> upload_to_drive_task 
