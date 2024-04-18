@@ -1,5 +1,6 @@
 import psycopg2
 import json
+import pandas as pd
 
 def create_database_and_table():
     
@@ -29,32 +30,7 @@ def create_database_and_table():
     )
     cursor = conn.cursor()
 
-    # Create Table spotify_data
-    cursor.execute("""
-        CREATE TABLE spotify_data (
-            unnamed_0 INT,
-            track_id VARCHAR(1000),
-            artists VARCHAR(1000),
-            album_name VARCHAR(1000),
-            track_name VARCHAR(1000),
-            popularity INT,
-            duration_ms INT,
-            explicit BOOLEAN,
-            danceability FLOAT,
-            energy FLOAT,
-            key INT,
-            loudness FLOAT,
-            mode INT,
-            speechiness FLOAT,
-            acousticness FLOAT,
-            instrumentalness FLOAT,
-            liveness FLOAT,
-            valence FLOAT,
-            tempo FLOAT,
-            time_signature INT,
-            track_genre VARCHAR(1000)
-        );
-    """)
+
         # Create Table grammys_data
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS grammys_data (
@@ -77,3 +53,34 @@ def create_database_and_table():
     conn.close()
 
 create_database_and_table()
+
+def load_grammys_data(csv_path):
+    with open('config\credentials.json', 'r') as file:
+        credentials = json.load(file)
+    
+    dataframe = pd.read_csv(csv_path, parse_dates=['published_at', 'updated_at'])
+
+    conn = psycopg2.connect(
+        dbname='workshop_2',
+        user=credentials['user'],
+        password=credentials['password'],
+        host=credentials['host'],
+        port=credentials['port']
+    )
+    
+    cursor = conn.cursor()
+
+    insert_query = """
+    INSERT INTO grammys_data (
+        year, title, published_at, updated_at, category, nominee,
+        artist, workers, img, winner
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    """
+    for row in dataframe.itertuples(index=False, name=None):
+        cursor.execute(insert_query, row)
+
+
+    conn.commit()
+    cursor.close()
+    conn.close()
+load_grammys_data('data/the_grammy_awards.csv')
