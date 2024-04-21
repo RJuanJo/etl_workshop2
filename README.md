@@ -127,11 +127,39 @@ You must have installed the following programs:
   
   ### Run Airflow ### 
         
-  To ensure that Docker is running and to initiate your Airflow environment, you can follow these steps:
+  1. To ensure that Docker is running and to initiate your Airflow environment, you can follow these steps:
 
   Verify Docker is Active:
     
   Open a terminal and check if Docker containers are running by using the command:
    
-    `docker ps`
+    docker ps
+  
+  This will list all active Docker containers. If Docker is not running, you might need to start Docker first.
+  
+  2. Initialize Airflow:
+  
+  Once Docker is running, navigate to the root of your repository in the terminal. 
+  
+  To initialize Airflow, run:
+
+    docker-compose up airflow-init
+
+  This command prepares the necessary setup for Airflow, such as initializing the database used by Airflow to track workflows and logs.
+  
+  3. Start Airflow:
+  
+  After the initialization is complete, start all services associated with Airflow by running:
+
+    docker-compose up
+
+  This command starts all containers defined in [docker-compose.yml](https://github.com/RJuanJo/etl_workshop2/blob/main/docker-compose.yaml) file, which typically includes the Airflow webserver, scheduler, and other necessary services.
+
+  4. Go to http://localhost:8080/ in your browser
+  5. Finally log in with the credentials `User: airflow` `Password: airflow` and start to run de etl_dag
+  
+## Visualizations <a name="visualizations"></a> ##
+
+  Once the DAG has completed its process, you can see the [Virtual Dashboard](https://app.powerbi.com/view?r=eyJrIjoiNDBiOGI4ZjktMTA0ZC00MmNiLWE4YjYtMTJhZjYzZDIxNWEyIiwidCI6IjY5M2NiZWEwLTRlZjktNDI1NC04OTc3LTc2ZTA1Y2I1ZjU1NiIsImMiOjR9) from a better interactive experience with the data.
+
     
