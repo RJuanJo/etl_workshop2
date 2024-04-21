@@ -2,29 +2,7 @@
 ### Overview ###
 _For this time, the project consists of automating the appropriate ETL process using Airflow, where these data are stored in a database and Google Drive, to finally create a dashboard with Power BI._ 
 - _Docker is used as a tool to run and utilize Apache Airflow on a Windows operating system._
-- _Google Drive API provided by Google Cloud is used to transfer the processed data to our Google Drive. Theres how to get the API:_
-  
-   **Enable the Google Drive API**
-
-  First, you need to enable the Google Drive API for your project on Google Cloud Platform:
-  
-  Go to the Google [Cloud Console](https://console.cloud.google.com/welcome/new).
- 
-   **Select or create a project.**
-
-  Go to "APIs & Services" > "Library."
-  
-  Search for "Google Drive API" and enable it.
-  
-    **Create credentials**
-  
-  To authenticate, you need to create credentials:
-  
-  Inside the console, go to "Credentials" and choose "Create credentials."
-  
-  Select "Service account".
-  
-  Save the JSON credentials file, which will include your access key.
+- _Google Drive API provided by Google Cloud is used to transfer the processed data to our Google Drive.
 
 ### Table of Contents ###
 - [Setup](#setup)
@@ -35,6 +13,36 @@ _For this time, the project consists of automating the appropriate ETL process u
   
 ### Setup <a name="setup"></a> ###
 
+_First of all, create a new folder and clone this repository, you
+must have installed the following programs:_
+
+   - **[Python](https://www.python.org)**
+   - **[PostgreSQL](https://www.postgresql.org/download/)**
+   - **[PowerBI](https://powerbi.microsoft.com/es-es/downloads/)**
+   - **[VS Code](https://code.visualstudio.com/download)** or **[Jupyter](https://jupyter.org/install)**
+   - **[Docker](https://www.docker.com/products/docker-desktop/)**
+  
+  **Enable the Google Drive API**
+
+  First, you need to enable the Google Drive API for this project on Google Cloud Platform:
+  
+  Go to the Google [Cloud Console](https://console.cloud.google.com/welcome/new).
+ 
+   **Select or create a project.**
+
+  Go to "APIs & Services" > "Library."
+  
+  Search for "Google Drive API" and enable it.
+  
+  **Create credentials**
+  
+  To authenticate, you need to create credentials:
+  
+  Inside the console, go to "Credentials" and choose "Create credentials."
+  
+  Select "Service account".
+  
+  Save the JSON credentials file as "secret.json", which will include your access key.
 
 - JSON credentials files ("credentials.json" & "secret.json") with this format into the **[config](https://github.com/RJuanJo/etl_workshop2/tree/main/config)** folder:
 
@@ -64,15 +72,6 @@ _For this time, the project consists of automating the appropriate ETL process u
   "universe_domain": "googleapis.com"
   }
   ```
-### Setup <a name="setup"></a> ###
-_First of all, create a new folder and clone this repository, you
-must have installed the following programs:_
-
-   - **[Python](https://www.python.org)**
-   - **[PostgreSQL](https://www.postgresql.org/download/)**
-   - **[PowerBI](https://powerbi.microsoft.com/es-es/downloads/)**
-   - **[VS Code](https://code.visualstudio.com/download)** or **[Jupyter](https://jupyter.org/install)**
-   - **[Docker](https://www.docker.com/products/docker-desktop/)**
 
 _Using the **[requirements.txt](https://github.com/RJuanJo/etl_workshop2/blob/main/config/requirements.txt)** go to the root of the repository and run the following command in a terminal shell:_
 
