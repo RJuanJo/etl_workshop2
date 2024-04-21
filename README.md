@@ -1,10 +1,11 @@
 # Data Engineering Workshop 2 #
-### Overview ###
+
+## Overview ##
 _For this time, the project consists of automating the appropriate ETL process using Airflow, where these data are stored in a database and Google Drive, to finally create a dashboard with Power BI._ 
 - _Docker is used as a tool to run and utilize Apache Airflow on a Windows operating system._
 - _Google Drive API provided by Google Cloud is used to transfer the processed data to our Google Drive.
 
-### Table of Contents ###
+## Table of Contents ##
 - [Setup](#setup)
 - [Data Handling](#data-handling)
 - [Data Loading](#data-loading)
@@ -45,7 +46,7 @@ You must have installed the following programs:
   
   Save the JSON credentials file as "secret.json", which will include your access key.
 
-JSON credentials files ("credentials.json" & "secret.json") with this format into the **[config](https://github.com/RJuanJo/etl_workshop2/tree/main/config)** folder:
+  JSON credentials files ("credentials.json" & "secret.json") with this format into the **[config](https://github.com/RJuanJo/etl_workshop2/tree/main/config)** folder:
   
   credentials.json:
   
@@ -77,29 +78,29 @@ JSON credentials files ("credentials.json" & "secret.json") with this format int
   }
   ```
 
-_Using the **[requirements.txt](https://github.com/RJuanJo/etl_workshop2/blob/main/config/requirements.txt)** go to the root of the repository and run the following command in a terminal shell:_
+  _Using the **[requirements.txt](https://github.com/RJuanJo/etl_workshop2/blob/main/config/requirements.txt)** go to the root of the repository and run the   following command in a terminal shell:_
 
-```python
-pip install -r ../config/requirements.txt
-```
+  ```python
+  pip install -r ../config/requirements.txt
+  ```
 
-_Previous command will install the following necessary libraries for the project_
+  _Previous command will install the following necessary libraries for the project_
 
-```python
-- apache-airflow
-- pandas
-- numpy
-- requests
-- psycopg2-binary
-- matplotlib
-- seaborn
-- scipy
-- sqlalchemy
-- google-auth
-- google-auth-oauthlib
-- google-auth-httplib2
-- google-api-python-client
-```
+  ```python
+  - apache-airflow
+  - pandas
+  - numpy
+  - requests
+  - psycopg2-binary
+  - matplotlib
+  - seaborn
+  - scipy
+  - sqlalchemy
+  - google-auth
+  - google-auth-oauthlib
+  - google-auth-httplib2
+  - google-api-python-client
+  ```
 
 ### Data Loading and Transformation <a name="data-loading"></a> ###
  _This process was carried out in two parts, the **[First Notebook](https://github.com/RJuanJo/etl_workshop1/blob/main/notebooks/load_data.ipynb)** is responsible for reading and loading the data into the MySQL database. These are loaded and stored using a structure or model defined in the **[Structure File](https://github.com/RJuanJo/etl_workshop1/blob/main/db_model/models_structure.py)** inside the **[db_model](https://github.com/RJuanJo/etl_workshop1/tree/main/db_model)** folder._
