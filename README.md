@@ -12,7 +12,7 @@ _For this time, the project consists of automating the appropriate ETL process u
 - [Airflow Automating](#airflow-automating)
 - [Visualizations](#visualizations)
   
-### Setup <a name="setup"></a> ###
+## Setup <a name="setup"></a> ##
 
 _First of all, create a new folder and clone this repository._
 
@@ -102,13 +102,12 @@ You must have installed the following programs:
   - google-api-python-client
   ```
 
-### Data Loading and Transformation <a name="data-loading"></a> ###
+## Data Loading and Transformation <a name="data-loading"></a> ##
  _This process was carried out in two parts, the **[First Notebook](https://github.com/RJuanJo/etl_workshop1/blob/main/notebooks/load_data.ipynb)** is responsible for reading and loading the data into the MySQL database. These are loaded and stored using a structure or model defined in the **[Structure File](https://github.com/RJuanJo/etl_workshop1/blob/main/db_model/models_structure.py)** inside the **[db_model](https://github.com/RJuanJo/etl_workshop1/tree/main/db_model)** folder._
 
 _The **[Second Notebook](https://github.com/RJuanJo/etl_workshop1/blob/main/notebooks/workshop_eda.ipynb)** is where we extract the data from the database and begin a process of transformation and exploratory data analysis (EDA) to finally store the data in a new table also previously structured in the **[Structure File](https://github.com/RJuanJo/etl_workshop1/blob/main/db_model/models_structure.py)**._
 
-
-### Visualizations <a name="visualizations"></a> ###
+## Visualizations <a name="visualizations"></a> ##
 
 - Hires by Technology (Pie Chart): _Visualization of the distribution of hires by technology which were categorized to have a better format and ease when performing the analysis._
 
