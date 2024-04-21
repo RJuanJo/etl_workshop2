@@ -117,9 +117,9 @@ You must have installed the following programs:
     
   In the dags folder, there are two subfolders:
   
-  **dags_connection:** It is responsible for creating the DAG of our Airflow and connecting each of the functions that will serve as tasks within it.
+  **dags_connection:** It is responsible for creating the DAG of the Airflow and connecting each of the functions that will serve as tasks within it.
      
-  **etls:** Here are the files that contain the functions of our tasks and are divided as follows:
+  **etls:** Here are the files that contain the functions of the tasks and are divided as follows:
   
   - grammy_etl: responsible for the ETL for the Grammy dataset.
   - spotify_etl: responsible for the ETL for the Spotify dataset.
