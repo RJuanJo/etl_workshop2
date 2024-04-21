@@ -101,5 +101,34 @@ You must have installed the following programs:
   - google-api-python-client
   ```
 ## Data Preparation <a name="data-preparation"></a> ##
-
+  Before running Airflow, the database must be created, and the data for the Grammys must be stored as requested in the context of the workshop. 
   
+  Go to the [db_models](https://github.com/RJuanJo/etl_workshop2/tree/main/db_models) folder and run the [create_db](https://github.com/RJuanJo/etl_workshop2/blob/main/db_models/create_db.py) file, which   will create the database and store the data in the Grammys in its respective table. 
+  
+  Second, in the [notebooks](https://github.com/RJuanJo/etl_workshop2/tree/main/notebooks) folder where there is an EDA for each file (Spotify and Grammys), this will help better understand the data being handled and provide some visualizations that aid in analysis.
+
+## Airflow Automating <a name="airflow-automating"></a> ##
+
+  Here is where the process of data extraction, transformation, and loading (ETL) is carried out. 
+  
+  Each process is performed using functions that serve as tasks in our DAG.
+  
+  ### Airflow explanation ###
+    
+    In the dags folder, there are two subfolders:
+     **dags_connection:** It is responsible for creating the DAG of our Airflow and connecting each of the functions that will serve as tasks within it.
+     
+     **etls:** Here are the files that contain the functions of our tasks and are divided as follows:   
+      - grammy_etl: responsible for the ETL for the Grammy dataset.
+      - spotify_etl: responsible for the ETL for the Spotify dataset.
+      - merge_load_data: responsible for merging the data returned by the previous files and uploading them to the database in a new table.
+  
+  ### Run Airflow ### 
+        
+    To ensure that Docker is running and to initiate your Airflow environment, you can follow these steps:
+
+    Verify Docker is Active:
+    Open a terminal and check if Docker containers are running by using the command:
+    ```bash
+    docker ps
+    ```
