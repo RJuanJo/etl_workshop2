@@ -1,5 +1,6 @@
 .venv
 logs/
+plugins/
 credentials.json
 __pycache__/
 spotify_to_merge.csv
