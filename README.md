@@ -1,9 +1,9 @@
 # Data Engineering Workshop 2 #
 
 ## Overview ##
-_For this time, the project consists of automating the appropriate ETL process using Airflow, where these data are stored in a database and Google Drive, to finally create a dashboard with Power BI._ 
-- _Docker is used as a tool to run and utilize Apache Airflow on a Windows operating system._
-- _Google Drive API provided by Google Cloud is used to transfer the processed data to our Google Drive.
+For this time, the project consists of automating the appropriate ETL process using Airflow, where these data are stored in a database and Google Drive, to finally create a dashboard with Power BI.
+- Docker is used as a tool to run and utilize Apache Airflow on a Windows operating system.
+- Google Drive API provided by Google Cloud is used to transfer the processed data to our Google Drive.
 
 ## Table of Contents ##
 - [Setup](#setup)
@@ -14,7 +14,7 @@ _For this time, the project consists of automating the appropriate ETL process u
   
 ## Setup <a name="setup"></a> ##
 
-_First of all, create a new folder and clone this repository._
+First of all, create a new folder and clone this repository.
 
 You must have installed the following programs:
 
@@ -26,7 +26,7 @@ You must have installed the following programs:
   
 **Enable the Google Drive API**
 
-  First, you need to enable the Google Drive API for this project on Google Cloud Platform:
+  You need to enable the Google Drive API for this project on Google Cloud Platform:
   
   Go to the Google [Cloud Console](https://console.cloud.google.com/welcome/new).
  
@@ -78,13 +78,13 @@ You must have installed the following programs:
   }
   ```
 
-  _Using the **[requirements.txt](https://github.com/RJuanJo/etl_workshop2/blob/main/config/requirements.txt)** go to the root of the repository and run the   following command in a terminal shell:_
+  Using the **[requirements.txt](https://github.com/RJuanJo/etl_workshop2/blob/main/config/requirements.txt)** go to the root of the repository and run the   following command in a terminal shell:
 
   ```python
   pip install -r ../config/requirements.txt
   ```
 
-  _Previous command will install the following necessary libraries for the project_
+  Previous command will install the following necessary libraries for the project
 
   ```python
   - apache-airflow
@@ -105,17 +105,4 @@ You must have installed the following programs:
 ## Data Loading and Transformation <a name="data-loading"></a> ##
  _This process was carried out in two parts, the **[First Notebook](https://github.com/RJuanJo/etl_workshop1/blob/main/notebooks/load_data.ipynb)** is responsible for reading and loading the data into the MySQL database. These are loaded and stored using a structure or model defined in the **[Structure File](https://github.com/RJuanJo/etl_workshop1/blob/main/db_model/models_structure.py)** inside the **[db_model](https://github.com/RJuanJo/etl_workshop1/tree/main/db_model)** folder._
 
-_The **[Second Notebook](https://github.com/RJuanJo/etl_workshop1/blob/main/notebooks/workshop_eda.ipynb)** is where we extract the data from the database and begin a process of transformation and exploratory data analysis (EDA) to finally store the data in a new table also previously structured in the **[Structure File](https://github.com/RJuanJo/etl_workshop1/blob/main/db_model/models_structure.py)**._
-
-## Visualizations <a name="visualizations"></a> ##
-
-- Hires by Technology (Pie Chart): _Visualization of the distribution of hires by technology which were categorized to have a better format and ease when performing the analysis._
-
-- Hires by Year (Horizontal Bar Chart): _Shows the number of hires per year._
-
-- Hires by Seniority (Bar Chart): _Represents the number of hires by seniority level._
-
-- Hires by Country Over Years (Multiline Chart): _Hiring trends by the chosen countries over the years._
-
-### These visualizations can be seen in the **[Dashboard Summary](https://github.com/RJuanJo/etl_workshop1/blob/main/data/files/Workshop_DashB.pdf)**.
-### In turn, you can access the **[Virtual Dashboard](https://app.powerbi.com/view?r=eyJrIjoiNjJjYzhlMzMtMDRiYy00NWRkLTg2ZGQtN2EwNGM2NTMxYjQ5IiwidCI6IjY5M2NiZWEwLTRlZjktNDI1NC04OTc3LTc2ZTA1Y2I1ZjU1NiIsImMiOjR9&pageName=ReportSection)** for a more interactive experience and a greater display of the data.
+## Data Handling <a name="data-handling"></a> ##
