@@ -23,19 +23,19 @@ You must have installed the following programs:
    - **[VS Code](https://code.visualstudio.com/download)** or **[Jupyter](https://jupyter.org/install)**
    - **[Docker](https://www.docker.com/products/docker-desktop/)**
   
-  **Enable the Google Drive API**
+**Enable the Google Drive API**
 
   First, you need to enable the Google Drive API for this project on Google Cloud Platform:
   
   Go to the Google [Cloud Console](https://console.cloud.google.com/welcome/new).
  
-   **Select or create a project.**
+   - **Select or create a project.**
 
   Go to "APIs & Services" > "Library."
   
   Search for "Google Drive API" and enable it.
   
-  **Create credentials**
+  - **Create credentials**
   
   To authenticate, you need to create credentials:
   
@@ -45,9 +45,10 @@ You must have installed the following programs:
   
   Save the JSON credentials file as "secret.json", which will include your access key.
 
-- JSON credentials files ("credentials.json" & "secret.json") with this format into the **[config](https://github.com/RJuanJo/etl_workshop2/tree/main/config)** folder:
-
+JSON credentials files ("credentials.json" & "secret.json") with this format into the **[config](https://github.com/RJuanJo/etl_workshop2/tree/main/config)** folder:
+  
   credentials.json:
+  
   ```
   {
     "user": "your_user",
@@ -57,7 +58,9 @@ You must have installed the following programs:
     "database": "db_name"
   }
   ```
+
   secret.json
+  
   ```
   {
   "type": "service_account",
