@@ -4,19 +4,19 @@ _For this time, the project consists of automating the appropriate ETL process u
 - _Docker is used as a tool to run and utilize Apache Airflow on a Windows operating system._
 - _Google Drive API provided by Google Cloud is used to transfer the processed data to our Google Drive. Theres how to get the API:_
   
- - **Enable the Google Drive API**
+   **Enable the Google Drive API**
 
   First, you need to enable the Google Drive API for your project on Google Cloud Platform:
   
   Go to the Google [Cloud Console](https://console.cloud.google.com/welcome/new).
  
- - **Select or create a project.**
+   **Select or create a project.**
 
   Go to "APIs & Services" > "Library."
   
   Search for "Google Drive API" and enable it.
   
-  - **Create credentials**
+    **Create credentials**
   
   To authenticate, you need to create credentials:
   
