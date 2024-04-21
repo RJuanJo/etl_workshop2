@@ -111,7 +111,7 @@ You must have installed the following programs:
 
   Here is where the process of data extraction, transformation, and loading (ETL) is carried out. 
   
-  Each process is performed using functions that serve as tasks in our DAG.
+  Each process is performed using functions that serve as tasks in the DAG.
   
   ### Airflow explanation ###
     
