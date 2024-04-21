@@ -1,8 +1,5 @@
 import pandas as pd
 import logging
-import json
-from sqlalchemy import create_engine, MetaData
-from sqlalchemy.orm import sessionmaker
 import numpy as np
 
 def extract_spotify_data(**kwargs):
@@ -11,7 +8,7 @@ def extract_spotify_data(**kwargs):
 
     try:
         df_spotify = pd.read_csv('/data/spotify_dataset.csv')
-        #df_spotify = df_spotify.iloc[:50000] 
+        #df_spotify = df_spotify.iloc[:Any number] Use this line if airflow have problems with processing all data
 
         logger.info('Spotify dataset loaded successfully', df_spotify.info())
 

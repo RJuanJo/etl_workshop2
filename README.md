@@ -7,8 +7,7 @@ For this time, the project consists of automating the appropriate ETL process us
 
 ## Table of Contents ##
 - [Setup](#setup)
-- [Data Handling](#data-handling)
-- [Data Loading](#data-loading)
+- [Data Preparation](#data-preparation)
 - [Airflow Automating](#airflow-automating)
 - [Visualizations](#visualizations)
   
@@ -101,5 +100,6 @@ You must have installed the following programs:
   - google-auth-httplib2
   - google-api-python-client
   ```
-## Data Handling <a name="data-handling"></a> ##
+## Data Preparation <a name="data-preparation"></a> ##
+
   
