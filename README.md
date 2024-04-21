@@ -153,7 +153,7 @@ You must have installed the following programs:
 
     docker-compose up
 
-  This command starts all containers defined in [docker-compose.yml](https://github.com/RJuanJo/etl_workshop2/blob/main/docker-compose.yaml) file, which typically includes the Airflow webserver, scheduler, and other necessary services.
+  This command starts all containers defined in [docker-compose.yaml](https://github.com/RJuanJo/etl_workshop2/blob/main/docker-compose.yaml) file, which typically includes the Airflow webserver, scheduler, and other necessary services.
 
   4. Go to http://localhost:8080/ in your browser
   5. Finally log in with the credentials `User: airflow` `Password: airflow` and start to run de etl_dag
