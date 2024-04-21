@@ -46,7 +46,6 @@ def create_database_and_table():
             winner BOOLEAN
         );
     """)
-    
 
     conn.commit()
     cursor.close()
