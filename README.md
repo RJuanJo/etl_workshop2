@@ -13,8 +13,9 @@ _For this time, the project consists of automating the appropriate ETL process u
   
 ### Setup <a name="setup"></a> ###
 
-_First of all, create a new folder and clone this repository, you
-must have installed the following programs:_
+_First of all, create a new folder and clone this repository._
+
+You must have installed the following programs:
 
    - **[Python](https://www.python.org)**
    - **[PostgreSQL](https://www.postgresql.org/download/)**
