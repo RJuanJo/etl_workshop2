@@ -32,19 +32,19 @@ You must have installed the following programs:
  
    - **Select or create a project.**
 
-  Go to "APIs & Services" > "Library."
+      Go to "APIs & Services" > "Library."
   
-  Search for "Google Drive API" and enable it.
+      Search for "Google Drive API" and enable it.
   
   - **Create credentials**
   
-  To authenticate, you need to create credentials:
+      To authenticate, you need to create credentials:
   
-  Inside the console, go to "Credentials" and choose "Create credentials."
+      Inside the console, go to "Credentials" and choose "Create credentials."
   
-  Select "Service account".
+      Select "Service account".
   
-  Save the JSON credentials file as "secret.json", which will include your access key.
+      Save the JSON credentials file as "secret.json", which will include your access key.
 
   JSON credentials files ("credentials.json" & "secret.json") with this format into the **[config](https://github.com/RJuanJo/etl_workshop2/tree/main/config)** folder:
   
