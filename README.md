@@ -5,15 +5,25 @@ _For this time, the project consists of automating the appropriate ETL process u
 - _Google Drive API provided by Google Cloud is used to transfer the processed data to our Google Drive. Theres how to get the API:_
   
  - **Enable the Google Drive API**
+
   First, you need to enable the Google Drive API for your project on Google Cloud Platform:
+  
   Go to the Google [Cloud Console](https://console.cloud.google.com/welcome/new).
+ 
  - **Select or create a project.**
+
   Go to "APIs & Services" > "Library."
+  
   Search for "Google Drive API" and enable it.
+  
   - **Create credentials**
+  
   To authenticate, you need to create credentials:
+  
   Inside the console, go to "Credentials" and choose "Create credentials."
+  
   Select "Service account".
+  
   Save the JSON credentials file, which will include your access key.
 
 ### Table of Contents ###
