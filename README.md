@@ -14,7 +14,7 @@ For this time, the project consists of automating the appropriate ETL process us
   
 ## Setup <a name="setup"></a> ##
 
-First of all, create a new folder and clone this repository.
+First of all, create a new folder for the project with "logs" and "plugins" folders in it and clone this repository.
 
 You must have installed the following programs:
 
@@ -101,8 +101,5 @@ You must have installed the following programs:
   - google-auth-httplib2
   - google-api-python-client
   ```
-
-## Data Loading and Transformation <a name="data-loading"></a> ##
- _This process was carried out in two parts, the **[First Notebook](https://github.com/RJuanJo/etl_workshop1/blob/main/notebooks/load_data.ipynb)** is responsible for reading and loading the data into the MySQL database. These are loaded and stored using a structure or model defined in the **[Structure File](https://github.com/RJuanJo/etl_workshop1/blob/main/db_model/models_structure.py)** inside the **[db_model](https://github.com/RJuanJo/etl_workshop1/tree/main/db_model)** folder._
-
 ## Data Handling <a name="data-handling"></a> ##
+  
