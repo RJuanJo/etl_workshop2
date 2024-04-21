@@ -132,8 +132,6 @@ You must have installed the following programs:
   Verify Docker is Active:
     
   Open a terminal and check if Docker containers are running by using the command:
-    
-    ```
-    docker ps
-    ```
+   
+    `docker ps`
     
